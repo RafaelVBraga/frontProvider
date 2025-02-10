@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+	<div th:fragment="navbar">
+		<nav
+			class="navbar navbar-expand-sm sticky-top bg-dark d-flex justify-content-between px-3">
+			<div class="container-fluid">
+				<button class="navbar-toggler" type="button"
+					data-bs-toggle="collapse" data-bs-target="#navbarToggler"
+					aria-controls="navbarToggler" aria-expanded="false"
+					aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div id="navbarToggler"class="d-flex gap-4 px-3 collapse navbar-collapse ">
+					<img th:src="@{/img/logocaucaia.png}">
+					<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+						<li class="nav-item"><a class="mt-4 text-light nav-link"
+							th:href="@{/alimentacao/rotas}">Rotas</a>
+						<li 
+							class="nav-item"><a class="mt-4 text-light nav-link"
+							th:href="@{/alimentacao/fornecedores}">Fornecedores</a>
+						<li 
+							class="nav-item"><a class="mt-4 text-light nav-link"
+							th:href="@{/alimentacao/programas}">Programas</a>
+						<li 
+							class="nav-item"><a class="mt-4 text-light nav-link"
+							th:href="@{/alimentacao/escolas}">Escolas</a>
+						
+						
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+	</div>
+</body>
+</html>

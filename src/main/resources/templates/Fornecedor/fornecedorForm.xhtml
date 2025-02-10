@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Cadastro de Fornecedor</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+	<div class="container mt-5 d-flex flex-column justify-content-center">
+		<h2>Cadastro de Fornecedor</h2>
+		<form
+			th:action="@{${fornecedor.id != null} ? '/alimentacao/fornecedores/edit' : '/alimentacao/fornecedores/save'}"
+			th:object="${fornecedor}" method="post">
+			<div class="form-group">
+				<input type="text" class="form-control" id="id" th:field="*{id}"
+					hidden="hidden"><label for="nome">Nome:</label> <input
+					type="text" class="form-control" id="nome" th:field="*{nome}"
+					required>
+			</div>
+			<div class="form-group">
+				<label for="cnpj">CNPJ:</label> <input type="text"
+					class="form-control" id="cnpj" th:field="*{cnpj}" required>
+			</div>
+			<div class="form-group">
+				<label for="dataRegistro">Data de Registro:</label> <input
+					type="date" class="form-control" id="dataRegistro"
+					th:field="*{dataRegistro}" required>
+			</div>
+			<div class="form-group">
+				<label for="telefone">Telefone:</label> <input type="text"
+					class="form-control" id="telefone" th:field="*{telefone}" required>
+			</div>
+			<div class="form-group">
+				<label for="email">Email:</label> <input type="email"
+					class="form-control" id="email" th:field="*{email}" required>
+			</div>
+			<div class=" d-flex justify-content-around align-items-center">
+				<button type="submit" class="btn btn-primary" th:text="${fornecedor.id != null} ? 'Atualizar' : 'Cadastrar'">Cadastrar</button>
+				<a class="btn btn-primary" th:href="@{/alimentacao/fornecedores}">Voltar</a>
+			</div>
+		</form>
+	</div>
+</body>
+</html>
