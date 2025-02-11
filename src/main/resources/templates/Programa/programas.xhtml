@@ -16,28 +16,28 @@
 	<div
 		class="d-flex flex-column justify-content-center align-items-center">
 
-		<h1>Rotas</h1>
-		<a class="btn btn-primary" th:href="@{/rotas/add}">Adicionar
-			Nova Rota</a>
+		<h1>Programas</h1>
+		<a class="btn btn-primary" th:href="@{/programas/add}">Adicionar
+			</a>
 		<table class="table">
 			<thead>
 				<tr>
 					<th>Id</th>
-					<th>Rota</th>
+					<th>Programa</th>
 					<th>Escolas</th>
 					<th>Ação</th>
 				</tr>
 			</thead>
 			<tbody>
-				<tr th:each="rota: ${rotas}">
-					<td th:text="${rota.id}">ID</td>
-					<td th:text="${rota.nome}">Nome</td>
+				<tr th:each="programa: ${programas}">
+					<td th:text="${programa.id}">ID</td>
+					<td th:text="${programa.nome}">Nome</td>
 					<td
-						th:text="${rota.escolas==null}?'0':${#arrays.length(rota.escolas)}">Escolas</td>
+						th:text="${programa.escolas==null}?'0':${#arrays.length(programa.escolas)}">Escolas</td>
 					<td><a class="btn btn-success"
-						th:href="@{/alimentacao/rotas/edit(id=${rota.id})}">Editar</a></td>
+						th:href="@{/programas/edit(id=${programa.id})}">Editar</a></td>
 					<td><a class="btn btn-danger"
-						th:href="@{/alimentacao/rotas/delete(id=${rota.id})}">Deletar</a></td>
+						th:href="@{/programas/delete(id=${programa.id})}">Deletar</a></td>
 				</tr>
 			</tbody>
 

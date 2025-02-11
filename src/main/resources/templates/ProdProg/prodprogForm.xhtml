@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Cadastro de Produto por Programa</title>
+</head>
+<body>
+    <h1>Cadastro de Produto por Programa</h1>
+    <form th:action="@{/produto-programa/salvar}" th:object="${produtoPrograma}" method="post">
+        <div>
+            <label for="produto">Produto:</label>
+            <select th:field="*{produto.produtoId}">
+                <option th:each="produto : ${produtos}" th:value="${produto.id}" th:text="${produto.nome}"></option>
+            </select>
+        </div>
+        <div>
+            <label for="programa">Programa:</label>
+            <select th:field="*{programa.programaId}">
+                <option th:each="programa : ${programas}" th:value="${programa.id}" th:text="${programa.nome}"></option>
+            </select>
+        </div>
+        <div>
+            <label for="percapita">Per Capita:</label>
+            <input type="number" th:field="*{percapita}" />
+        </div>
+        <div>
+            <label for="frequencia">Frequência:</label>
+            <input type="number" th:field="*{frequencia}" />
+        </div>
+        <div>
+            <button type="submit">Salvar</button>
+        </div>
+    </form>
+</body>
+</html>

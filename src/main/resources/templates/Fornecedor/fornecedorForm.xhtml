@@ -10,7 +10,7 @@
 	<div class="container mt-5 d-flex flex-column justify-content-center">
 		<h2>Cadastro de Fornecedor</h2>
 		<form
-			th:action="@{${fornecedor.id != null} ? '/alimentacao/fornecedores/edit' : '/alimentacao/fornecedores/save'}"
+			th:action="@{${fornecedor.id != null} ? '/fornecedores/edit' : '/fornecedores/save'}"
 			th:object="${fornecedor}" method="post">
 			<div class="form-group">
 				<input type="text" class="form-control" id="id" th:field="*{id}"
@@ -37,7 +37,7 @@
 			</div>
 			<div class=" d-flex justify-content-around align-items-center">
 				<button type="submit" class="btn btn-primary" th:text="${fornecedor.id != null} ? 'Atualizar' : 'Cadastrar'">Cadastrar</button>
-				<a class="btn btn-primary" th:href="@{/alimentacao/fornecedores}">Voltar</a>
+				<a class="btn btn-primary" th:href="@{/fornecedores}">Voltar</a>
 			</div>
 		</form>
 	</div>

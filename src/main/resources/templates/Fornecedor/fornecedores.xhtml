@@ -16,7 +16,7 @@
 	<div class="d-flex flex-column justify-content-center align-items-center">
 	
 	<h1>Fornecedores</h1>
-		<a class="btn btn-primary" th:href="@{/alimentacao/fornecedores/add}">Adicionar
+		<a class="btn btn-primary" th:href="@{/fornecedores/add}">Adicionar
 			Novo Fornecedor</a>
 		<table class="table">
 			<thead>
@@ -33,13 +33,13 @@
 					<td th:text="${fornecedor.nome}">Nome</td>
 					<td th:text="${fornecedor.cnpj}">CNPJ</td>
 					<td class="d-flex gap-4"><a class="btn btn-success"
-						th:href="@{/alimentacao/fornecedores/edit(id=${fornecedor.id})}">Editar</a>
+						th:href="@{/fornecedores/edit(id=${fornecedor.id})}">Editar</a>
 						
 						<a class="btn btn-primary"
-						th:href="@{/alimentacao/fornecedores/fornecedor/produtos(id=${fornecedor.id})}">Produtos</a>
+						th:href="@{/fornecedores/fornecedor/produtos(id=${fornecedor.id})}">Produtos</a>
 						
 						<a class="btn btn-danger"
-						th:href="@{/alimentacao/fornecedores/delete(id=${fornecedor.id})}">Deletar</a></td>
+						th:href="@{/fornecedores/delete(id=${fornecedor.id})}">Deletar</a></td>
 				</tr>
 			</tbody>
 

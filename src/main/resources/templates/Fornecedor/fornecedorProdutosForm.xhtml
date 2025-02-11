@@ -31,7 +31,7 @@
 
 			<div class="m-3 p-3 border border-success rounded shadow ">
 				<form th:object="${produto}"
-					th:action="@{/alimentacao/fornecedores/produto/add}" method="post">
+					th:action="@{/fornecedores/produto/add}" method="post">
 					<div class="d-flex flex-column align-items-center form-group">
 						<input th:value="${fornecedor.id}" th:name="idFornecedor"
 							hidden="hidden">
@@ -87,7 +87,7 @@
 		</div>
 		<div class=" d-flex justify-content-around align-items-center">
 
-			<a class="btn btn-primary" th:href="@{/alimentacao/fornecedores}">Voltar</a>
+			<a class="btn btn-primary" th:href="@{/fornecedores}">Voltar</a>
 		</div>
 
 	</div>
